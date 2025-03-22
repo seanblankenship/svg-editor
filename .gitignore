@@ -60,6 +60,9 @@ coverage
 .env.*
 !.env.example
 
+# Documentation
+.docs/
+
 # Misc
 .cache/
 .temp/

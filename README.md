@@ -1,54 +1,115 @@
-# React + TypeScript + Vite
+# SVG Editor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, web-based SVG editor with bidirectional code and visual synchronization. Built with React, TypeScript, and modern web technologies.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Real-time visual and code editing of SVG files
+- Bidirectional highlighting between code and visual elements
+- Robust persistence with auto-save and version history
+- Advanced SVG editing tools and transform operations
+- Support for patterns, gradients, filters, and masks
+- Export to various formats including optimized SVG
+- Modern, responsive interface with light/dark mode
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Node.js 18+ and npm/yarn
+- Modern browser (Chrome, Firefox, Safari, Edge)
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/svg-editor.git
+cd svg-editor
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
 ```
+
+3. Start the development server:
+
+```bash
+npm run dev
+```
+
+4. Open your browser and navigate to `http://localhost:3000`
+
+## Development
+
+### Project Structure
+
+```
+svg-editor/
+├── src/
+│   ├── components/            # UI components
+│   ├── hooks/                 # Custom React hooks
+│   ├── lib/                   # Core library code
+│   ├── store/                 # State management
+│   ├── services/              # Business logic
+│   ├── styles/                # Global styles
+│   ├── types/                 # TypeScript types
+│   └── ...
+├── public/                    # Static assets
+├── .docs/                     # Project documentation
+└── ...
+```
+
+### Tech Stack
+
+- **React**: UI framework
+- **TypeScript**: Type-safe JavaScript
+- **Vite**: Build tool and dev server
+- **Tailwind CSS**: Utility-first CSS
+- **shadcn/ui**: UI component library
+- **svg.js**: SVG manipulation
+- **Monaco Editor**: Code editor
+- **Zustand**: State management
+
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+- `npm run test` - Run tests
+- `npm run coverage` - Run tests with coverage
+
+## Documentation
+
+For detailed documentation, see the `.docs` directory:
+
+- [Project Vision](.docs/PROJECT_VISION.md)
+- [Architecture](.docs/ARCHITECTURE.md)
+- [Implementation Plan](.docs/IMPLEMENTATION_PLAN.md)
+- [Testing Strategy](.docs/TESTING_STRATEGY.md)
+
+### Feature Checklists
+
+- [Project Setup](.docs/feature_checklists/01_PROJECT_SETUP.md)
+- [SVG Rendering](.docs/feature_checklists/02_SVG_RENDERING.md)
+- [Editing Features](.docs/feature_checklists/03_EDITING_FEATURES.md)
+- [Advanced Features](.docs/feature_checklists/04_ADVANCED_FEATURES.md)
+- [Polish & Finalization](.docs/feature_checklists/05_POLISH_FINALIZATION.md)
+
+## Contributing
+
+Contributions are welcome! Please check out our [Contributing Guide](CONTRIBUTING.md) for details.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- SVG specification and standards
+- Open source libraries and tools that make this project possible
+- [SVG.js](https://svgjs.dev/) for SVG manipulation
+- [Monaco Editor](https://microsoft.github.io/monaco-editor/) for code editing
