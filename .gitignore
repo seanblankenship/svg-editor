@@ -38,6 +38,7 @@ dist-ssr
 
 # Cursor-specific files
 .cursor/
+.cursorignore
 .cursor-*.json
 cursor.json
 

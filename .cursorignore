@@ -24,6 +24,11 @@ out/
 coverage/
 .nyc_output/
 
+# Cursor
+.cursor/
+.cursor-*.json
+cursor.json
+
 # Temporary files
 .temp/
 .tmp/
