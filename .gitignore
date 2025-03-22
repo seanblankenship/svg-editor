@@ -1,0 +1,72 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependency directories
+node_modules
+.pnp
+.pnp.js
+
+# Build output
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Cursor-specific files
+.cursor/
+.cursor-*.json
+cursor.json
+
+# Testing
+coverage
+.nyc_output
+
+# Cache directories
+.npm
+.eslintcache
+.stylelintcache
+.prettiercache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Misc
+.cache/
+.temp/
+.tmp/
+*.bak
+*.tmp
+*~
+._*
+Thumbs.db
+desktop.ini 

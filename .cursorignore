@@ -1,0 +1,65 @@
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Build output
+dist/
+dist-ssr/
+build/
+out/
+.output/
+
+# Cache directories
+.npm/
+.eslintcache
+.stylelintcache
+.prettiercache
+.cache/
+.next/
+.nuxt/
+.vite/
+
+# Testing
+coverage/
+.nyc_output/
+
+# Temporary files
+.temp/
+.tmp/
+*.tmp
+*.bak
+*~
+._*
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Large media files
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv
+*.mp3
+
+# Auto-generated files
+auto-imports.d.ts
+components.d.ts
+
+# Log files
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Misc
+.DS_Store
+Thumbs.db
+desktop.ini 

@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html, body {
+    @apply h-full overflow-hidden;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Monaco editor styling fixes */
+  .monaco-editor .decorationsOverviewRuler {
+    @apply right-0;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-secondary/30 rounded-sm;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/50 rounded-sm hover:bg-muted-foreground/70;
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  /* Element highlighting */
+  .highlight-element {
+    @apply outline-2 outline-dashed outline-primary animate-pulse;
+  }
+
+  .code-highlight {
+    @apply bg-primary/10 border-l-2 border-primary;
+  }
+}
+
+@layer components {
+  .splitter-layout {
+    @apply flex h-full w-full overflow-hidden;
+  }
+  
+  .splitter-layout.vertical {
+    @apply flex-col;
+  }
+  
+  .splitter-layout .layout-pane {
+    @apply flex-shrink-0 overflow-hidden;
+  }
+  
+  .splitter-layout .layout-splitter {
+    @apply flex-shrink-0 bg-border hover:bg-primary/30 cursor-col-resize;
+    width: 4px;
+  }
+  
+  .splitter-layout.vertical .layout-splitter {
+    @apply cursor-row-resize;
+    height: 4px;
+    width: 100%;
+  }
+} 
