@@ -1,111 +1,108 @@
 # SVG Editor
 
-A modern, web-based SVG editor with bidirectional code and visual synchronization. Built with React, TypeScript, and modern web technologies.
+A web-based SVG editor that provides a dual-interface experience with both visual editing capabilities and direct code manipulation, with real-time synchronization between the two views.
 
 ## Features
 
-- Real-time visual and code editing of SVG files
-- Bidirectional highlighting between code and visual elements
-- Robust persistence with auto-save and version history
-- Advanced SVG editing tools and transform operations
-- Support for patterns, gradients, filters, and masks
-- Export to various formats including optimized SVG
-- Modern, responsive interface with light/dark mode
+- Visual SVG editing with intuitive controls
+- Real-time code synchronization
+- Dark/light mode theming
+- Responsive design for various screen sizes
+- SVG export options
 
-## Getting Started
+## Tech Stack
+
+- **Framework**: React 19 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS v4
+- **UI Components**: shadcn/ui
+- **SVG Manipulation**: svg.js (coming soon)
+- **Code Editor**: Monaco Editor (coming soon)
+- **State Management**: Zustand (coming soon)
+
+## Setup Instructions
 
 ### Prerequisites
 
-- Node.js 18+ and npm/yarn
-- Modern browser (Chrome, Firefox, Safari, Edge)
+- Node.js 18+ and npm 8+
 
 ### Installation
 
 1. Clone the repository:
 
-```bash
-git clone https://github.com/yourusername/svg-editor.git
-cd svg-editor
-```
+   ```bash
+   git clone https://github.com/yourusername/svg-editor.git
+   cd svg-editor
+   ```
 
 2. Install dependencies:
 
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
 3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open your browser and navigate to:
+   ```
+   http://localhost:3000
+   ```
+
+## Building for Production
 
 ```bash
-npm run dev
+npm run build
 ```
 
-4. Open your browser and navigate to `http://localhost:3000`
+The build output will be in the `dist` directory.
 
 ## Development
 
+### Key Commands
+
+- `npm run dev` - Start the development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview the production build
+- `npm run lint` - Run ESLint
+
 ### Project Structure
 
-```
-svg-editor/
-├── src/
-│   ├── components/            # UI components
-│   ├── hooks/                 # Custom React hooks
-│   ├── lib/                   # Core library code
-│   ├── store/                 # State management
-│   ├── services/              # Business logic
-│   ├── styles/                # Global styles
-│   ├── types/                 # TypeScript types
-│   └── ...
-├── public/                    # Static assets
-├── .docs/                     # Project documentation
-└── ...
-```
-
-### Tech Stack
-
-- **React**: UI framework
-- **TypeScript**: Type-safe JavaScript
-- **Vite**: Build tool and dev server
-- **Tailwind CSS**: Utility-first CSS
-- **shadcn/ui**: UI component library
-- **svg.js**: SVG manipulation
-- **Monaco Editor**: Code editor
-- **Zustand**: State management
-
-### Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
-- `npm run test` - Run tests
-- `npm run coverage` - Run tests with coverage
-
-## Documentation
-
-For detailed documentation, see the `.docs` directory:
-
-- [Project Vision](.docs/PROJECT_VISION.md)
-- [Architecture](.docs/ARCHITECTURE.md)
-- [Implementation Plan](.docs/IMPLEMENTATION_PLAN.md)
-- [Testing Strategy](.docs/TESTING_STRATEGY.md)
-
-### Feature Checklists
-
-- [Project Setup](.docs/feature_checklists/01_PROJECT_SETUP.md)
-- [SVG Rendering](.docs/feature_checklists/02_SVG_RENDERING.md)
-- [Editing Features](.docs/feature_checklists/03_EDITING_FEATURES.md)
-- [Advanced Features](.docs/feature_checklists/04_ADVANCED_FEATURES.md)
-- [Polish & Finalization](.docs/feature_checklists/05_POLISH_FINALIZATION.md)
+- `/src` - Source code
+  - `/components` - UI components
+  - `/hooks` - Custom React hooks
+  - `/store` - State management
+  - `/lib` - Utility functions
+  - `/services` - API services
 
 ## Contributing
 
-Contributions are welcome! Please check out our [Contributing Guide](CONTRIBUTING.md) for details.
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+### CI/CD Workflows
+
+The project uses GitHub Actions for continuous integration and testing:
+
+- `ci.yml` - Runs linting, tests, and build verification on every push and pull request
+- `playwright.yml` - Runs end-to-end tests using Playwright
+
+### Development Phases
+
+This project is being developed in phases:
+
+- ✅ **Phase 1**: Project Setup and Modern Infrastructure (Complete)
+- 🔄 **Phase 2**: SVG Rendering and Persistence (In Progress)
+- 📅 **Phase 3**: Basic Editing Features (Planned)
+- 📅 **Phase 4**: Enhanced Editing and UX (Planned)
+- 📅 **Phase 5**: Advanced Features and Export (Planned)
+- 📅 **Phase 6**: Polish and Finalization (Planned)
+
+For more detailed information about each phase, see the [Implementation Plan](.docs/IMPLEMENTATION_PLAN.md).
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 

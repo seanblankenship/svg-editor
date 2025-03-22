@@ -61,9 +61,6 @@ coverage
 .env.*
 !.env.example
 
-# Documentation
-.docs/
-
 # Misc
 .cache/
 .temp/
@@ -74,3 +71,10 @@ coverage
 ._*
 Thumbs.db
 desktop.ini 
+*storybook.log
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
