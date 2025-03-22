@@ -1,12 +1,7 @@
 import { ReactElement } from 'react';
 import { render, RenderOptions } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { ThemeProvider } from 'next-themes';
-
-// Custom wrapper provider with all required contexts
-function AllProviders({ children }: { children: React.ReactNode }) {
-  return <ThemeProvider attribute="class">{children}</ThemeProvider>;
-}
+import { AllProviders } from './providers';
 
 // Custom render function that includes providers
 function customRender(ui: ReactElement, options?: Omit<RenderOptions, 'wrapper'>) {
@@ -24,5 +19,7 @@ function setup(jsx: ReactElement) {
   };
 }
 
-export * from '@testing-library/react';
+// Named exports for testing utilities
 export { customRender as render, setup };
+// Re-export testing library
+export * from '@testing-library/react';
